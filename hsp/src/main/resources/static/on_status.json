@@ -1,0 +1,99 @@
+{
+  "context": {
+    "domain": "nic2004:85110",
+    "country": "IND",
+    "city": "std:080",
+    "action": "on_status",
+    "core_version": "0.7.1",
+    "transaction_id": "8ad631e4-01e7-44e1-a999-db41ef0ae4f6",
+    "message_id": "85a422c4-2867-4d72-b5f5-d31588e2f7c5",
+    "timestamp": "2021-03-23T10:00:40.065Z"
+  },
+  "message": {
+    "order": {
+      "id": "26492",
+      "provider": {
+        "id": "1",
+        "descriptor": {
+          "name": "MAX Hospitals"
+        }
+      },
+      "state": "BOOKED",
+      "items": [
+        {
+          "id": "1",
+          "descriptor": {
+            "name": "Consultation"
+          },
+          "fulfillment_id": "2",
+          "provider_id": "1"
+        }
+      ],
+      "billing": {
+        "name": "John Doe",
+        "address": {
+          "door": "12",
+          "building": "Salarpuria Greenage",
+          "street": "No 7, Hosur Road",
+          "area_code": "560068"
+        },
+        "email": "john.doe@example.com",
+        "phone": "+91-9999999999"
+      },
+      "fulfillment": {
+        "id": "2",
+        "type": "DIGITAL-OPD",
+        "person": {
+          "id": "1",
+          "name": "Dr Asthana",
+          "gender": "male",
+          "image": "https://image/of/person.png",
+          "cred": "smc:13-50839"
+        },
+        "state": {
+          "descriptor": {
+            "code": "HEALTH_RECORDS_UPLOADED"
+          }
+        },
+        "time": {
+          "range": {
+            "start": "T10:15Z",
+            "end": "T10:30Z"
+          }
+        },
+        "customer": {
+          "./nha.health_id": "61-8787-9274-4422",
+          "./nha.phr_address": "example@ndhm"
+        },
+        "tags": {
+          "./dhp-0_7_1.teleconf_url": "https://us06web.zoom.us/j/82071160538"
+        }
+      },
+      "quote": {
+        "price": {
+          "currency": "INR",
+          "value": "120",
+          "breakup": [
+            {
+              "./dhp-0_7_1.consultation": "100"
+            },
+            {
+              "./dhp-0_7_1.phr_handling_fees": "10"
+            },
+            {
+              "./ind-gstin.cgst": "5"
+            },
+            {
+              "./ind-gstin.sgst": "5"
+            }
+          ]
+        }
+      },
+      "payment": {
+        "uri": "payto://ban/98273982749428?amount=INR:110&ifsc=SBIN0000575&message=hello",
+        "type": "ON-ORDER",
+        "status": "PAID"
+      }
+    }
+  }
+}

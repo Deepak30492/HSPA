@@ -1,0 +1,65 @@
+{
+  "context": {
+    "domain": "nic2004:85110",
+    "country": "IND",
+    "city": "std:080",
+    "action": "select",
+    "core_version": "0.7.1",
+    "message_id": "85a422c4-2867-4d72-b5f5-d31588e2f7c5",
+    "timestamp": "2021-03-23T10:00:40.065Z"
+  },
+  "message": {
+    "order": {
+      "provider": {
+        "id": "1",
+        "descriptor": {
+          "name": "MAX Hospitals"
+        }
+      },
+      "items": [
+        {
+          "id": "1",
+          "descriptor": {
+            "name": "Consultation"
+          },
+          "fulfillment_id": "2",
+          "provider_id": "1"
+        }
+      ],
+      "fulfillment": {
+        "id": "2",
+        "type": "DIGITAL-OPD",
+        "person": {
+          "id": "1",
+          "name": "Dr Asthana",
+          "gender": "male",
+          "image": "https://image/of/doctor.png",
+          "cred": "uhiId:237402938409485039850935"
+        },
+        "time": {
+          "range": {
+            "start": "T10:15Z",
+            "end": "T10:30Z"
+          }
+        }
+      },
+      "quote": {
+        "price": {
+          "currency": "INR",
+          "value": "110",
+          "breakup": [
+            {
+              "./dhp-0_7_1.consultation": "100"
+            },
+            {
+              "./dhp-0_7_1.cgst": "5"
+            },
+            {
+              "./dhp-0_7_1.sgst": "5"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
